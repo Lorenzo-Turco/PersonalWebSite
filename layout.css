@@ -1,0 +1,58 @@
+/* Stile generale del corpo della pagina */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Stile dell'header */
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Stile del titolo dell'header */
+header h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 2em;
+}
+
+/* Stile della navigazione nell'header */
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Stile del contenuto principale */
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Stile dei titoli delle sezioni */
+main h2 {
+    font-size: 1.5em;
+    color: #333;
+}
+
+/* Stile del footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
