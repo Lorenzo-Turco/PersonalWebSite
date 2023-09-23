@@ -3,21 +3,21 @@ document.getElementById("sezione1").addEventListener("click", function (e) {
     e.preventDefault();
     nascondiIntestazione();
     caricaSottosezione("sottosezione1.html");
-    chiudiMenu(); // Chiudi il menù quando un elemento di navigazione viene cliccato
+    chiudiMenu();
 });
 
 document.getElementById("sezione2").addEventListener("click", function (e) {
     e.preventDefault();
     nascondiIntestazione();
     caricaSottosezione("sottosezione2.html");
-    chiudiMenu(); // Chiudi il menù quando un elemento di navigazione viene cliccato
+    chiudiMenu();
 });
 
 document.getElementById("sezione3").addEventListener("click", function (e) {
     e.preventDefault();
     nascondiIntestazione();
     caricaSottosezione("sottosezione3.html");
-    chiudiMenu(); // Chiudi il menù quando un elemento di navigazione viene cliccato
+    chiudiMenu();
 });
 
 // Funzione per nascondere l'intestazione

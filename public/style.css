@@ -3,7 +3,7 @@
 .container {
     display: flex;
     flex-direction: column; /* Imposta la direzione del layout a colonna */
-    background: linear-gradient(to right, #f7f7f7, #fff); /* Sfondo più tenue */
+    background: linear-gradient(to right, #ffffff, #ffa500); /* Sfondo più tenue */
 }
 
 /* Stili per l'header (intestazione) */
@@ -20,14 +20,17 @@
     font-size: 50px;
 }
 
-/* Stili per la sidebar */
+/* Nascondi il menù a comparsa all'inizio */
 .sidebar {
+    transform: translateX(-300px);
+    transition: 0.4s;
     width: 250px;
     background-color: #fff; /* Colore di sfondo bianco */
     color: #333; /* Colore del testo più scuro */
     padding: 20px;
     overflow-y: auto;
     border-right: 2px solid #ffa500; /* Aggiungi una sottile linea arancione a destra */
+    border-radius: 10px; /* Bordo più smussato */
 }
 
 .sidebar nav ul {
@@ -54,9 +57,9 @@
     color: #fff; /* Colore del testo al passaggio del mouse (bianco) */
 }
 
-/* Stili per l'icona del menù a comparsa */
-.menu-icon {
-    cursor: pointer;
+/* Stili per l'apertura del menù a comparsa */
+.sidebar.active {
+    transform: translateX(0);
 }
 
 .line {
@@ -67,9 +70,9 @@
     transition: 0.4s;
 }
 
-/* Stili per l'apertura del menù a comparsa */
-.sidebar.active {
-    transform: translateX(0);
+/* Stili per l'icona del menù a comparsa */
+.menu-icon {
+    cursor: pointer;
 }
 
 /* Stili per l'icona del menù attivo */
@@ -83,19 +86,6 @@
 
 .menu-icon.active .line:nth-child(3) {
     transform: rotate(45deg) translate(-5px, -5px);
-}
-
-/* Nascondi il menù a comparsa all'inizio */
-.sidebar {
-    transform: translateX(-300px);
-    transition: 0.4s;
-    width: 250px;
-    background-color: #fff; /* Colore di sfondo bianco */
-    color: #333; /* Colore del testo più scuro */
-    padding: 20px;
-    overflow-y: auto;
-    border-right: 2px solid #ffa500; /* Aggiungi una sottile linea arancione a destra */
-    border-radius: 10px; /* Bordo più smussato */
 }
 
 /* Stili per il contenuto principale con immagine */
