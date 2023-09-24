@@ -1,12 +1,4 @@
 /* sottosezione.css */
-/* Aggiungi stili CSS personalizzati per le sottosezione qui */
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f5f5f5;
-}
 
 h2 {
     color: #333;
@@ -15,28 +7,6 @@ h2 {
 p {
     color: #666;
     font-size: 16px;
-}
-
-button {
-    background-color: #007BFF;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
-a {
-    color: #007BFF;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
 }
 
 /* Stili per il bottone Home */

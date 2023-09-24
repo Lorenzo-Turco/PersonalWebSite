@@ -1,15 +1,22 @@
 // script.js
-document.getElementById("sezione1").addEventListener("click", function (e) {
+document.getElementById("aboutme").addEventListener("click", function (e) {
     e.preventDefault();
     nascondiIntestazione();
-    caricaSottosezione("sottosezione1.html");
+    caricaSottosezione("aboutme.html");
     chiudiMenu();
 });
 
-document.getElementById("sezione2").addEventListener("click", function (e) {
+document.getElementById("aboutme-link").addEventListener("click", function (e) {
     e.preventDefault();
     nascondiIntestazione();
-    caricaSottosezione("sottosezione2.html");
+    caricaSottosezione("aboutme.html");
+    chiudiMenu();
+});
+
+document.getElementById("finance").addEventListener("click", function (e) {
+    e.preventDefault();
+    nascondiIntestazione();
+    caricaSottosezione("finance.html");
     chiudiMenu();
 });
 
@@ -62,6 +69,15 @@ function chiudiMenu() {
     menuIcon.classList.remove("active");
 }
 
+const linkTornaLanding1 = document.getElementById("torna-landing-1");
+if (linkTornaLanding1) {
+    linkTornaLanding1.addEventListener("click", function (e) {
+        e.preventDefault();
+        mostraIntestazione();
+        caricaSottosezione("main.html");
+    });
+}
+
 const linkTornaLanding2 = document.getElementById("torna-landing-2");
 if (linkTornaLanding2) {
     linkTornaLanding2.addEventListener("click", function (e) {
@@ -74,15 +90,6 @@ if (linkTornaLanding2) {
 const linkTornaLanding3 = document.getElementById("torna-landing-3");
 if (linkTornaLanding3) {
     linkTornaLanding3.addEventListener("click", function (e) {
-        e.preventDefault();
-        mostraIntestazione();
-        caricaSottosezione("main.html");
-    });
-}
-
-const linkTornaLanding1 = document.getElementById("torna-landing-1");
-if (linkTornaLanding1) {
-    linkTornaLanding1.addEventListener("click", function (e) {
         e.preventDefault();
         mostraIntestazione();
         caricaSottosezione("main.html");

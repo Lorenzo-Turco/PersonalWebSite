@@ -1,6 +1,9 @@
 /* style.css */
+
 /* Stili per il contenitore principale */
 .container {
+    width: 100%; /* Imposta la larghezza al 100% */
+    height: 100%; /* Imposta l'altezza al 100% */
     display: flex;
     flex-direction: column; /* Imposta la direzione del layout a colonna */
     background: linear-gradient(to right, #ffffff, #ffa500); /* Sfondo più tenue */
@@ -12,7 +15,7 @@
     padding: 20px;
     background-color: #ffa500;
     color: #333;
-    border-radius: 10px; /* Aggiungi bordi smussati */
+    border-radius: 20px; /* Aggiungi bordi smussati */
 }
 
 /* Stili per il titolo principale */
@@ -27,10 +30,10 @@
     width: 250px;
     background-color: #fff; /* Colore di sfondo bianco */
     color: #333; /* Colore del testo più scuro */
-    padding: 20px;
+    padding: 10px;
     overflow-y: auto;
-    border-right: 2px solid #ffa500; /* Aggiungi una sottile linea arancione a destra */
-    border-radius: 10px; /* Bordo più smussato */
+    border-right: 3px solid #ffa500; /* Aggiungi una sottile linea arancione a destra */
+    border-radius: 20px; /* Bordo più smussato */
 }
 
 .sidebar nav ul {
@@ -49,12 +52,14 @@
     padding: 15px; /* Maggiore spazio tra i link */
     font-size: 18px;
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    border-radius: 20px; /* Bordo più smussato */
 }
 
 /* Stili per il passaggio del mouse sui link del menù */
 .sidebar nav ul li a:hover {
     background-color: #ffa500; /* Colore di sfondo al passaggio del mouse (arancione) */
     color: #fff; /* Colore del testo al passaggio del mouse (bianco) */
+    border-radius: 20px; /* Aggiungi bordi smussati */
 }
 
 /* Stili per l'apertura del menù a comparsa */
@@ -99,23 +104,33 @@ main img {
     height: auto; /* Impedisce la distorsione dell'immagine */
 }
 
-/* Stili per il link di ritorno alla landing page nelle sottosezioni */
-.torna-landing {
-    color: #ffa500; /* Colore del testo (arancione) */
-    text-decoration: none;
-    font-weight: bold;
-    display: block;
-    margin-top: 20px;
-}
-
-.torna-landing:hover {
-    text-decoration: underline; /* Sottolinea il link al passaggio del mouse */
-}
-
 /* Stili per l'effetto di hover sui link nella landing page */
 .nav ul li:hover {
     background-color: #ffa500; /* Colore di sfondo al passaggio del mouse (arancione) */
     color: #fff; /* Colore del testo al passaggio del mouse (bianco) */
+    border-radius: 20px; /* Aggiungi bordi smussati */
 }
 
-/* Altri stili CSS */
+/* Stili per i social icons */
+.social-icons {
+    position: absolute;
+    padding: 5px;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.social-icon {
+    margin-left: 10px;
+    font-size: 24px;
+    text-decoration: none;
+    transition: color 0.3s, transform 0.3s; /* Aggiungi transizione per il colore e la trasformazione */
+}
+
+/* Ingrossa leggermente il simbolo al passaggio del mouse */
+.social-icon:hover {
+    color: #ff5733;
+    transform: scale(1.2); /* Ingrossa il simbolo del 20% al passaggio del mouse */
+}
