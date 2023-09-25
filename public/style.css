@@ -21,6 +21,19 @@
 /* Stili per il titolo principale */
 .main-title {
     font-size: 50px;
+    margin-bottom: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.main-title img {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: -29px;
+    left: calc(50% - 144px);
+    transform: rotate(-15deg);
+    z-index: 1;
 }
 
 /* Nascondi il menù a comparsa all'inizio */
