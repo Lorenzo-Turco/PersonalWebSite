@@ -74,7 +74,7 @@ if (linkTornaLanding1) {
     linkTornaLanding1.addEventListener("click", function (e) {
         e.preventDefault();
         mostraIntestazione();
-        caricaSottosezione("main.html");
+        caricaSottosezione("index.html");
     });
 }
 
@@ -83,7 +83,7 @@ if (linkTornaLanding2) {
     linkTornaLanding2.addEventListener("click", function (e) {
         e.preventDefault();
         mostraIntestazione();
-        caricaSottosezione("main.html");
+        caricaSottosezione("index.html");
     });
 }
 
@@ -92,6 +92,6 @@ if (linkTornaLanding3) {
     linkTornaLanding3.addEventListener("click", function (e) {
         e.preventDefault();
         mostraIntestazione();
-        caricaSottosezione("main.html");
+        caricaSottosezione("index.html");
     });
 }
