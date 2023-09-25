@@ -24,6 +24,12 @@ body {
     border-radius: 20px;
 }
 
+.header-icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 /* Stili per il titolo principale */
 .main-title {
     font-size: 50px;
@@ -42,44 +48,160 @@ body {
     z-index: 1;
 }
 
-/* Stili per il menu */
-.subsections {
-    background-color: #ffe56f;
-    padding: 5px;
-    border-radius: 20px;
-    margin-top: 10px; /* Aggiungi margine sopra il menu */
+/* Stili per il menu quando la larghezza è superiore a 768px */
+@media (min-width: 769px) {
+    
+    .mobile-menu {
+        display: none; /* Nascondi il menu mobile sopra la soglia */
+    }
+    
+    /* Stili per il testo "Menù" */
+    .menu-text {
+        display: none; /* Nascondi il menu mobile sopra la soglia */
+    }
+
+    .subsections {
+        background-color: #ffe56f;
+        padding: 5px;
+        border-radius: 20px;
+        margin-top: 10px;
+    }
+
+    .subsections ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .subsections ul li {
+        margin-right: 20px;
+    }
+
+    .subsections ul li:last-child {
+        margin-right: 0;
+    }
+
+    .subsections ul li a {
+        text-decoration: none;
+        color: #333;
+        font-size: 18px;
+        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border 0.3s ease-in-out;
+        padding: 5px 10px;
+        border: 1px solid transparent;
+        border-radius: 20px;
+    }
+
+    .subsections ul li a:hover {
+        background-color: #ff7ce3e7;
+        color: #ffffff;
+        border-color: #333;
+    }
 }
 
-.subsections ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center; /* Centra i link orizzontalmente */
-}
+/* Stili per il menu quando la larghezza è inferiore o uguale a 768px */
+@media (max-width: 768px) {
 
-.subsections ul li {
-    margin-right: 20px; /* Spazio tra i link */
-}
+    /* Stili per l'icona hamburger */
+    .menu-icon {
+        font-size: 24px;
+        display: block;
+        position: relative;
+        cursor: pointer;
+    }
+    
+    /* Aggiungi stili per il contenitore del testo "Menù" e l'icona */
+    .mobile-menu-toggle {
+        display: flex; /* Usa un layout flexbox */
+        align-items: center; /* Allinea verticalmente al centro */
+    }
+    
+    /* Stili per il testo "Menù" */
+    .menu-text {
+        font-size: 20px;
+        color: #333;
+        margin-left: 10px; /* Aggiungi spazio tra l'icona e il testo */
+    }
 
-.subsections ul li:last-child {
-    margin-right: 0; /* Rimuovi il margine destro dall'ultimo link */
-}
+    .subsections ul li {
+        display: none;
+    }
 
-.subsections ul li a {
-    text-decoration: none;
-    color: #333;
-    font-size: 18px;
-    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border 0.3s ease-in-out; /* Aggiungi transizione per il bordo */
-    padding: 5px 10px; /* Spazio intorno al testo del link */
-    border: 1px solid transparent; /* Nascondi il bordo inizialmente */
-    border-radius: 20px;
-}
+    /* Stili per le linee dell'icona */
+    .bar {
+        width: 25px;
+        height: 3px;
+        background-color: #333;
+        margin: 4px 0;
+        transition: 0.4s;
+    }
 
-/* Stili per il passaggio del mouse sui link del menu */
-.subsections ul li a:hover {
-    background-color: #ff7ce3e7;
-    color: #ffffff;
-    border-color: #333; /* Mostra il bordo al passaggio del mouse */
+    /* Stili per l'icona del menu mobile (X) */
+    .menu-icon.active .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 5px);
+        width: 25px;
+        top: 12px; /* Regola la posizione delle linee per ottenere l'aspetto di una "X" */
+    }
+    
+    .menu-icon.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .menu-icon.active .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -5px);
+        width: 25px;
+        top: 12px; /* Regola la posizione delle linee per ottenere l'aspetto di una "X" */
+    }
+
+    /* Rimuovi la trasformazione del menu mobile */
+    .mobile-menu.active {
+        display: block;
+        transform: translateY(0%);
+    }
+    
+    /* Stili per il menu mobile */
+    .mobile-menu {
+        display: none; /* Nascondi il menu mobile inizialmente */
+        position: relative;
+        background-color: #ffe56f;
+        padding: 5px;
+        border-radius: 20px;
+        z-index: 1; /* Imposta uno z-index superiore per far sovrapporre il menu mobile */
+        transform: translateY(-100%); /* Muovi il menu mobile verso l'alto, inizialmente nascosto */
+        transition: transform 0.3s ease-in-out; /* Aggiungi una transizione per un effetto di scorrimento */
+        width: 150px; /* Rendi il menu mobile largo quanto il contenitore */
+        max-width: 150px; /* Larghezza massima del menu mobile */
+    }
+
+    .mobile-menu ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mobile-menu ul li {
+        margin-bottom: 10px;
+    }
+
+    .mobile-menu ul li a {
+        text-decoration: none;
+        color: #333;
+        font-size: 18px;
+        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border 0.3s ease-in-out;
+        padding: 5px 10px;
+        border: 1px solid transparent;
+        border-radius: 20px;
+        max-width: 200px; /* Larghezza massima del menu */
+    }
+
+    .mobile-menu ul li a:hover {
+        background-color: #ff7ce3e7;
+        color: #ffffff;
+        border-color: #333;
+    }
+
 }
 
 /* Stili per il contenuto principale con immagine */
@@ -98,12 +220,6 @@ main img {
     background-color: #ffa500; /* Colore di sfondo al passaggio del mouse (arancione) */
     color: #fff; /* Colore del testo al passaggio del mouse (bianco) */
     border-radius: 20px; /* Aggiungi bordi smussati */
-}
-
-.header-icons {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 }
 
 /* Stili per i social icons */

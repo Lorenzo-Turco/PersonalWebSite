@@ -1,4 +1,3 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -28,19 +27,35 @@
                     </div>
                     <h1 class="main-title"><img src="images/fez-image.png" width="50"> <i>Turco Page</i></h1>
                     <!-- Links alle sottosezioni -->
-                    <nav class="subsections">
+                    <div class="subsections">
+                        <div class="mobile-menu-toggle" id="mobile-menu-toggle">
+                            <div class="menu-icon">
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                            </div>
+                            <div class="menu-text">Menù</div>
+                        </div>
                         <ul>
                             <li><a href="aboutme.html" id="aboutme">About Me</a></li>
                             <li><a href="finance.html" id="finance">Finance</a></li>
                             <li><a href="videogame.html" id="videogame">Videogame</a></li>
                         </ul>
-                    </nav>
+                    </div>
                 </header>
             </div>
             <main id="contenuto">
+                <div class="mobile-menu" id="mobile-menu">
+                    <ul>
+                        <li><a href="aboutme.html" id="aboutme-mobile">About Me</a></li>
+                        <li><a href="finance.html" id="finance-mobile">Finance</a></li>
+                        <li><a href="videogame.html" id="videogame-mobile">Videogame</a></li>
+                    </ul>
+                </div>
                 <p>Ciao <a href="aboutme.html" id="aboutme-link">About Me</a></p>
                 <img src="images/background-image.jpg" alt="under construction...">
             </main>
+            <script src="script.js"></script>
         </div>
     </body>
 </html>
