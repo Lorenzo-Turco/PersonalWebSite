@@ -1,12 +1,18 @@
 /* sottosezione.css */
 
+body {
+    background: #e5e5e5;
+}
+
 /* Stili per il contenitore principale */
 .container-subsection {
+    max-width: 1200px; /* Puoi regolare questa larghezza massima come preferisci */
+    margin: 0 auto; /* Centra il contenuto orizzontalmente nella pagina */
     width: 100%; /* Imposta la larghezza al 100% */
     height: 100%; /* Imposta l'altezza al 100% */
     display: flex;
     flex-direction: column; /* Imposta la direzione del layout a colonna */
-    background: linear-gradient(to right, #ffffff, #ffa500); /* Sfondo più tenue */
+    background: linear-gradient(to right, #e5e5e5, #ffa500); /* Sfondo più tenue */
 }
 
 /* Stili per l'header (intestazione) */
@@ -16,6 +22,12 @@
     background-color: #ffa500;
     color: #333;
     border-radius: 20px; /* Aggiungi bordi smussati */
+}
+
+.header-icons-subsection {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
 }
 
 h2 {
@@ -28,10 +40,8 @@ p {
 }
 
 /* Stili per il bottone Home */
-.home-button {
-    position: absolute;
-    top: 12px; /* Distanza dalla parte superiore */
-    left: 12px; /* Distanza dalla parte sinistra */
+.home-button-subsection {
+    position: relative;
     text-decoration: none;
     background-color: #333;
     color: #fff;
@@ -45,7 +55,7 @@ p {
 }
 
 /* Stili per l'icona */
-.home-button i {
+.home-button-subsection i {
     margin-right: 0; /* Rimuovi il margine destro dell'icona */
     font-size: 24px; /* Aumenta la dimensione dell'icona */
 }

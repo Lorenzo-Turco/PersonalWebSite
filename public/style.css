@@ -1,21 +1,27 @@
 /* style.css */
 
+body {
+    background: #e5e5e5;
+}
+
 /* Stili per il contenitore principale */
 .container {
-    width: 100%; /* Imposta la larghezza al 100% */
-    height: 100%; /* Imposta l'altezza al 100% */
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
     display: flex;
-    flex-direction: column; /* Imposta la direzione del layout a colonna */
-    background: linear-gradient(to right, #ffffff, #ffa500); /* Sfondo più tenue */
+    flex-direction: column;
+    background: linear-gradient(to right, #e5e5e5, #ffa500);
 }
 
 /* Stili per l'header (intestazione) */
 .header {
     text-align: center;
-    padding: 20px;
+    padding: 15px 20px;
     background-color: #ffa500;
     color: #333;
-    border-radius: 20px; /* Aggiungi bordi smussati */
+    border-radius: 20px;
 }
 
 /* Stili per il titolo principale */
@@ -36,74 +42,44 @@
     z-index: 1;
 }
 
-/* Nascondi il menù a comparsa all'inizio */
-.sidebar {
-    transform: translateX(-300px);
-    transition: 0.4s;
-    width: 250px;
-    background-color: #fff; /* Colore di sfondo bianco */
-    color: #333; /* Colore del testo più scuro */
-    padding: 10px;
-    overflow-y: auto;
-    border-right: 3px solid #ffa500; /* Aggiungi una sottile linea arancione a destra */
-    border-radius: 20px; /* Bordo più smussato */
+/* Stili per il menu */
+.subsections {
+    background-color: #ffe56f;
+    padding: 5px;
+    border-radius: 20px;
+    margin-top: 10px; /* Aggiungi margine sopra il menu */
 }
 
-.sidebar nav ul {
+.subsections ul {
     list-style: none;
     padding: 0;
+    display: flex;
+    justify-content: center; /* Centra i link orizzontalmente */
 }
 
-.sidebar nav ul li {
-    margin-bottom: 10px;
+.subsections ul li {
+    margin-right: 20px; /* Spazio tra i link */
 }
 
-.sidebar nav ul li a {
+.subsections ul li:last-child {
+    margin-right: 0; /* Rimuovi il margine destro dall'ultimo link */
+}
+
+.subsections ul li a {
     text-decoration: none;
-    color: #333; /* Colore del testo più scuro */
-    display: block;
-    padding: 15px; /* Maggiore spazio tra i link */
+    color: #333;
     font-size: 18px;
-    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-    border-radius: 20px; /* Bordo più smussato */
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border 0.3s ease-in-out; /* Aggiungi transizione per il bordo */
+    padding: 5px 10px; /* Spazio intorno al testo del link */
+    border: 1px solid transparent; /* Nascondi il bordo inizialmente */
+    border-radius: 20px;
 }
 
-/* Stili per il passaggio del mouse sui link del menù */
-.sidebar nav ul li a:hover {
-    background-color: #ffa500; /* Colore di sfondo al passaggio del mouse (arancione) */
-    color: #fff; /* Colore del testo al passaggio del mouse (bianco) */
-    border-radius: 20px; /* Aggiungi bordi smussati */
-}
-
-/* Stili per l'apertura del menù a comparsa */
-.sidebar.active {
-    transform: translateX(0);
-}
-
-.line {
-    width: 25px;
-    height: 3px;
-    background-color: #333; /* Colore delle linee */
-    margin: 5px 0;
-    transition: 0.4s;
-}
-
-/* Stili per l'icona del menù a comparsa */
-.menu-icon {
-    cursor: pointer;
-}
-
-/* Stili per l'icona del menù attivo */
-.menu-icon.active .line:nth-child(1) {
-    transform: rotate(-45deg) translate(-5px, 5px);
-}
-
-.menu-icon.active .line:nth-child(2) {
-    opacity: 0;
-}
-
-.menu-icon.active .line:nth-child(3) {
-    transform: rotate(45deg) translate(-5px, -5px);
+/* Stili per il passaggio del mouse sui link del menu */
+.subsections ul li a:hover {
+    background-color: #ff7ce3e7;
+    color: #ffffff;
+    border-color: #333; /* Mostra il bordo al passaggio del mouse */
 }
 
 /* Stili per il contenuto principale con immagine */
@@ -124,12 +100,16 @@ main img {
     border-radius: 20px; /* Aggiungi bordi smussati */
 }
 
+.header-icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 /* Stili per i social icons */
 .social-icons {
-    position: absolute;
+    position: relative;
     padding: 5px;
-    top: 10px;
-    right: 10px;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -150,15 +130,13 @@ main img {
 
 /* Stile per il link ai log del sito */
 .log-link {
-    position: absolute;
-    top: 12px;
-    left: 12px;
+    position: relative;
     text-decoration: none;
     color: #fff;
     font-size: 20px;
     background-color: #333;
     padding: 7px 10px;
-    border-radius: 20px;
+    border-radius: 50%;
     transition: color 0.2s, transform 0.2s; /* Aggiungi transizione per il colore e la trasformazione */
 }
 
