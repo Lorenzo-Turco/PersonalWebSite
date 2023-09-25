@@ -1,5 +1,5 @@
 // script.js
-document.getElementById("aboutme").addEventListener("click", function (e) {
+/*document.getElementById("aboutme").addEventListener("click", function (e) {
     e.preventDefault();
     nascondiIntestazione();
     caricaSottosezione("aboutme.html");
@@ -26,6 +26,13 @@ document.getElementById("sezione3").addEventListener("click", function (e) {
     caricaSottosezione("sottosezione3.html");
     chiudiMenu();
 });
+
+document.getElementById("logs-link").addEventListener("click", function (e) {
+    e.preventDefault();
+    nascondiIntestazione();
+    caricaSottosezione("logs.html");
+    chiudiMenu();
+});*/
 
 // Funzione per nascondere l'intestazione
 function nascondiIntestazione() {
@@ -69,7 +76,7 @@ function chiudiMenu() {
     menuIcon.classList.remove("active");
 }
 
-const linkTornaLanding1 = document.getElementById("torna-landing-1");
+/*const linkTornaLanding1 = document.getElementById("torna-landing-1");
 if (linkTornaLanding1) {
     linkTornaLanding1.addEventListener("click", function (e) {
         e.preventDefault();
@@ -95,3 +102,12 @@ if (linkTornaLanding3) {
         caricaSottosezione("index.html");
     });
 }
+
+const linkTornaLanding4 = document.getElementById("torna-landing-4");
+if (linkTornaLanding4) {
+    linkTornaLanding4.addEventListener("click", function (e) {
+        e.preventDefault();
+        mostraIntestazione();
+        caricaSottosezione("index.html");
+    });
+}*/

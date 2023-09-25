@@ -1,0 +1,62 @@
+/* sottosezione.css */
+
+/* Stili per il contenitore principale */
+.container-subsection {
+    width: 100%; /* Imposta la larghezza al 100% */
+    height: 100%; /* Imposta l'altezza al 100% */
+    display: flex;
+    flex-direction: column; /* Imposta la direzione del layout a colonna */
+    background: linear-gradient(to right, #ffffff, #ffa500); /* Sfondo più tenue */
+}
+
+/* Stili per l'header (intestazione) */
+.header-subsection {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffa500;
+    color: #333;
+    border-radius: 20px; /* Aggiungi bordi smussati */
+}
+
+h2 {
+    color: #333;
+}
+
+p {
+    color: #666;
+    font-size: 16px;
+}
+
+/* Stili per il bottone Home */
+.home-button {
+    position: absolute;
+    top: 12px; /* Distanza dalla parte superiore */
+    left: 12px; /* Distanza dalla parte sinistra */
+    text-decoration: none;
+    background-color: #333;
+    color: #fff;
+    border-radius: 50%;
+    padding: 10px; /* Aumenta il padding per aumentare la dimensione */
+    width: 30px; /* Imposta la larghezza desiderata */
+    height: 30px; /* Imposta l'altezza desiderata */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Stili per l'icona */
+.home-button i {
+    margin-right: 0; /* Rimuovi il margine destro dell'icona */
+    font-size: 24px; /* Aumenta la dimensione dell'icona */
+}
+
+/* Stili per il contenuto principale con immagine */
+main {
+    flex-grow: 1; /* Flessibile per occupare lo spazio rimanente */
+    text-align: center;
+}
+
+main img {
+    max-width: 100%; /* Massima larghezza dell'immagine al 100% della larghezza del contenuto principale */
+    height: auto; /* Impedisce la distorsione dell'immagine */
+}

@@ -126,11 +126,31 @@ main img {
     margin-left: 10px;
     font-size: 24px;
     text-decoration: none;
-    transition: color 0.3s, transform 0.3s; /* Aggiungi transizione per il colore e la trasformazione */
+    transition: color 0.2s, transform 0.2s; /* Aggiungi transizione per il colore e la trasformazione */
 }
 
 /* Ingrossa leggermente il simbolo al passaggio del mouse */
 .social-icon:hover {
     color: #ff5733;
+    transform: scale(1.2); /* Ingrossa il simbolo del 20% al passaggio del mouse */
+}
+
+/* Stile per il link ai log del sito */
+.log-link {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    background-color: #333;
+    padding: 7px 10px;
+    border-radius: 20px;
+    transition: color 0.2s, transform 0.2s; /* Aggiungi transizione per il colore e la trasformazione */
+}
+
+.log-link:hover {
+    background-color: #686868; /* Cambia il colore di sfondo al passaggio del mouse */
+    color: #3eda00;
     transform: scale(1.2); /* Ingrossa il simbolo del 20% al passaggio del mouse */
 }
