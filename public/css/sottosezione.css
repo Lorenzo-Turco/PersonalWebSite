@@ -29,3 +29,44 @@ p {
     margin-right: 0; /* Rimuovi il margine destro dell'icona */
     font-size: 24px; /* Aumenta la dimensione dell'icona */
 }
+
+/* Stili per la tabella e il suo contenitore */
+.table-container {
+    overflow-x: auto; /* Abilita la barra di scorrimento orizzontale se la tabella è troppo larga per lo schermo */
+    margin-top: 20px;
+}
+
+/* Aggiungi uno sfondo gradient alla tabella */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: linear-gradient(to bottom, #d59a07, #f6d30d); /* Colore di sfondo gradient */
+    color: #000000; /* Colore del testo */
+}
+
+/* Stili per le intestazioni delle colonne */
+thead {
+    background-color: rgba(102, 87, 0, 0.533); /* Sfondo semi-trasparente per le intestazioni */
+}
+
+th {
+    border: 1px solid #b2b2b2;
+    padding: 10px;
+}
+
+/* Stili per le celle della tabella */
+td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+/* Stili per le righe pari della tabella */
+tbody tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.1); /* Sfondo semi-trasparente per le righe pari */
+}
+
+/* Stili per il simbolo Alpha rosso */
+.alpha-symbol {
+    color: rgb(255, 0, 0); /* Colore rosso per il simbolo */
+    font-size: 25px; /* Imposta la dimensione del simbolo Alpha a 25px */
+}

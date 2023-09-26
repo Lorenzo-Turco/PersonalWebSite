@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Change Logs</title>
+        <title>Lorenzo Turco</title>
         <link rel="icon" href="images/fez-image.png" type="image/png">
         <link rel="stylesheet" href="css/sottosezione.css">
         <link rel="stylesheet" href="style.css">
@@ -12,7 +12,7 @@
     </head>
     <body>
         <div class="container">
-            <div class="header">
+            <div class="header" id="header" onmousemove="followMouse(event)">
                 <header>
                     <div class="header-icons">
                         <a href="index.html" class="home-button-subsection">
@@ -23,9 +23,36 @@
                 </header>
             </div>
             <main>
-                <p><b>v0.1.0</b> <i>24/09/2023</i> First structure</p>
-                <p><b>v0.1.1</b> <i>25/09/2023</i> Enhanced mobile menù management</p>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Version</th>
+                                <th>Date</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="alpha-symbol">&alpha;</span> <b>v0.2.1</b></td>
+                                <td><i>26/09/2023</i></td>
+                                <td>Enhanced desktop and mobile menù graphics</td>
+                            </tr>
+                            <tr>
+                                <td><span class="alpha-symbol">&alpha;</span> <b>v0.2</b></td>
+                                <td><i>25/09/2023</i></td>
+                                <td>Enhanced mobile menù</td>
+                            </tr>
+                            <tr>
+                                <td><span class="alpha-symbol">&alpha;</span> <b>v0.1</b></td>
+                                <td><i>24/09/2023</i></td>
+                                <td>First structure</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </main>
+            <script src="script.js"></script>               
         </div>
     </body>
 </html>

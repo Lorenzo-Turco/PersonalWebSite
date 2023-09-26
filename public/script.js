@@ -19,3 +19,15 @@ window.addEventListener("click", function (e) {
         menuIcon.classList.remove("active"); // Rimuovi anche la classe "active" dall'icona
     }
 });
+
+function followMouse(event) {
+    const header = document.getElementById('header');
+    const mouseX = event.clientX / window.innerWidth;
+    const colorStart = `rgba(255, 165, 0)`;
+    const shapeSize = 0.3;
+    var gradientNumber = 255*(1 - shapeSize*(mouseX - 0.5)*(mouseX - 0.5));
+    const colorEnd = `rgb(55, ${gradientNumber}, 0)`;
+
+    header.style.background = `linear-gradient(45deg, ${colorStart}, ${colorEnd})`;
+
+}

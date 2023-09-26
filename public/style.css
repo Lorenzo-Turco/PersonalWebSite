@@ -4,24 +4,29 @@ body {
     background: #e5e5e5;
 }
 
+h1 {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Ombra del testo */
+}
+
 /* Stili per il contenitore principale */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     width: 100%;
     height: 100%;
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
-    background: linear-gradient(to right, #e5e5e5, #ffa500);
+    background: linear-gradient(to right, #e5e5e5, rgb(255, 165, 0));
 }
 
 /* Stili per l'header (intestazione) */
 .header {
     text-align: center;
     padding: 15px 20px;
-    background-color: #ffa500;
     color: #333;
     border-radius: 20px;
+    background: linear-gradient(45deg, rgb(255, 165, 0), rgb(55, 255, 0)); /* Sfondo arancione sfumato verso il verde */
 }
 
 .header-icons {
@@ -61,7 +66,7 @@ body {
     }
 
     .subsections {
-        background-color: #ffe56f;
+        background-color: #6bc4ffd8;
         padding: 5px;
         border-radius: 20px;
         margin-top: 10px;
@@ -93,7 +98,7 @@ body {
     }
 
     .subsections ul li a:hover {
-        background-color: #ff7ce3e7;
+        background-color: #cc59fd89;
         color: #ffffff;
         border-color: #333;
     }
@@ -163,7 +168,7 @@ body {
     .mobile-menu {
         display: none; /* Nascondi il menu mobile inizialmente */
         position: relative;
-        background-color: #ffe56f;
+        background-color: #6bc4ffd8;
         padding: 5px;
         border-radius: 20px;
         z-index: 1; /* Imposta uno z-index superiore per far sovrapporre il menu mobile */
@@ -171,6 +176,8 @@ body {
         transition: transform 0.3s ease-in-out; /* Aggiungi una transizione per un effetto di scorrimento */
         width: 150px; /* Rendi il menu mobile largo quanto il contenitore */
         max-width: 150px; /* Larghezza massima del menu mobile */
+        top: -1.5rem;
+        left: 1.3rem;
     }
 
     .mobile-menu ul {
@@ -178,7 +185,7 @@ body {
         padding: 0;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
     }
 
     .mobile-menu ul li {
@@ -197,7 +204,7 @@ body {
     }
 
     .mobile-menu ul li a:hover {
-        background-color: #ff7ce3e7;
+        background-color: #cc59fd89;
         color: #ffffff;
         border-color: #333;
     }
@@ -251,7 +258,7 @@ main img {
     color: #fff;
     font-size: 20px;
     background-color: #333;
-    padding: 7px 10px;
+    padding: 10px;
     border-radius: 50%;
     transition: color 0.2s, transform 0.2s; /* Aggiungi transizione per il colore e la trasformazione */
 }
