@@ -355,13 +355,13 @@ main img {
 /* Stili per il simbolo del sole */
 #theme-icon.fa-sun {
     font-size: 24px;
-    padding: 8px 6px;
+    padding: 7px 3px;
     color: #FFD700; /* Giallo per il sole */
 }
 
 /* Stili per il simbolo della luna */
 #theme-icon.fa-moon {
     font-size: 24px;
-    padding: 8px;
+    padding: 7px;
     color: #e7e7e7; /* Bianco per la luna */
 }
