@@ -11,16 +11,20 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     </head>
     <body>
-        <div class="container">
-            <div class="header" id="header" onmousemove="followMouse(event)">
+        <div class="container" id="containerlogs">
+            <div class="header" id="headerlogs" onmousemove="followMouse(event)">
                 <header>
                     <div class="header-icons">
                         <a href="index.html" class="home-button-subsection">
                             <i class="fas fa-home"></i>
                         </a>
+                        <button id="theme-toggle" class="theme-toggle-button">
+                            <i id="theme-icon" class="fas fa-sun"></i>
+                        </button> 
                     </div>
                     <h2 class="main-title">Change Logs</h2>
                 </header>
+                <script src="header-colors.js"></script>
             </div>
             <main>
                 <div class="table-container">
@@ -33,6 +37,11 @@
                             </tr>
                         </thead>
                         <tbody>
+                            <tr>
+                                <td><span class="alpha-symbol">&alpha;</span> <b>v0.3</b></td>
+                                <td><i>27/09/2023</i></td>
+                                <td>Added Dark mode</td>
+                            </tr>
                             <tr>
                                 <td><span class="alpha-symbol">&alpha;</span> <b>v0.2.1</b></td>
                                 <td><i>26/09/2023</i></td>

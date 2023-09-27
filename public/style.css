@@ -8,6 +8,10 @@ h1 {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Ombra del testo */
 }
 
+h1, h2, p {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
 /* Stili per il contenitore principale */
 .container {
     max-width: 1200px;
@@ -267,4 +271,32 @@ main img {
     background-color: #686868; /* Cambia il colore di sfondo al passaggio del mouse */
     color: #3eda00;
     transform: scale(1.2); /* Ingrossa il simbolo del 20% al passaggio del mouse */
+}
+
+/* Stili per il tema notturno */
+.dark-theme {
+    background-color: #818181; /* Cambia il colore di sfondo a un grigio scuro */
+    color: #e7e7e7; /* Cambia il colore del testo a bianco */
+    text-shadow: none; /* Rimuove l'ombra del testo */
+}
+
+/* Stili per il pulsante di cambio tema */
+.theme-toggle-button {
+    background-color: #6ab2ff; /* Sfondo blu per il tema notturno */
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 20px; /* Dimensione del pulsante */
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Stili per il simbolo del sole */
+#theme-icon.fa-sun {
+    color: #FFD700; /* Giallo per il sole */
+}
+
+/* Stili per il simbolo della luna */
+#theme-icon.fa-moon {
+    color: #e7e7e7; /* Bianco per la luna */
 }
