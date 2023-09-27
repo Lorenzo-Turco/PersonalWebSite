@@ -76,7 +76,7 @@ function darkMode() {
     headerTheme.style.background = `linear-gradient(45deg, rgb(165, 100, 100), rgb(255, 100, 100))`;
     headerTheme.style.color = '#e7e7e7'; // Cambia il colore del testo per tema notturno
     if(subsectionsTheme) {
-        subsectionsTheme.style.background = '#209700d8';
+        subsectionsTheme.style.background = '#6aa55ad8';
         subsectionItems.forEach((item) => {
             item.style.color = '#e7e7e7';
         });
