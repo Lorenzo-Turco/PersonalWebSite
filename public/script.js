@@ -73,7 +73,7 @@ function darkMode() {
     themeToggle.style.color = '#333'; // Cambia il colore del testo per tema notturno
     containerTheme.style.background = `linear-gradient(to right, #818181, rgb(165, 100, 100))`;
     containerTheme.style.color = '#e7e7e7'; // Testo bianco per tema diurno
-    headerTheme.style.background = `linear-gradient(45deg, rgb(165, 100, 100), rgb(255, 100, 100))`;
+    headerTheme.style.background = `linear-gradient(45deg, rgb(165, 100, 100), rgb(100, 120, 150))`;
     headerTheme.style.color = '#e7e7e7'; // Cambia il colore del testo per tema notturno
     if(subsectionsTheme) {
         subsectionsTheme.style.background = '#6aa55ad8';

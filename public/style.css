@@ -242,16 +242,78 @@ main img {
     justify-content: flex-end;
 }
 
-.social-icon {
-    margin-left: 10px;
+.social-icon-fb {
+    color: white;
+    background-color: #0866FF;
+    border-radius: 50%; /* Rendi il bordo circolare */
+    width: 35px; /* Imposta la larghezza */
+    height: 35px; /* Imposta l'altezza */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    text-decoration: none;
+    transition: color 0.2s, transform 0.2s; /* Aggiungi transizione per il colore e la trasformazione */
+}
+
+.social-icon-tw {
+    color: #ffffff;
+    background-color: black;
+    border-radius: 50%; /* Rendi il bordo circolare */
+    width: 35px; /* Imposta la larghezza */
+    height: 35px; /* Imposta l'altezza */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    text-decoration: none;
+    transition: color 0.2s, transform 0.2s; /* Aggiungi transizione per il colore e la trasformazione */
+}
+
+.social-icon-in {
+    color: white;
+    border-radius: 50%; /* Rendi il bordo circolare */
+    width: 35px; /* Imposta la larghezza */
+    height: 35px; /* Imposta l'altezza */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    text-decoration: none;
+    transition: color 0.2s, transform 0.2s; /* Aggiungi transizione per il colore e la trasformazione */
+	background-image: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);  
+}
+
+.social-icon-li {
+    color: #ffffff;
+    background-color: #0a66c2;
+    border-radius: 50%; /* Rendi il bordo circolare */
+    width: 35px; /* Imposta la larghezza */
+    height: 35px; /* Imposta l'altezza */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    text-decoration: none;
+    transition: color 0.2s, transform 0.2s; /* Aggiungi transizione per il colore e la trasformazione */
+}
+
+.social-icon-gh {
+    color: black;
+    background-color: white;
+    border-radius: 50%; /* Rendi il bordo circolare */
+    width: 35px; /* Imposta la larghezza */
+    height: 35px; /* Imposta l'altezza */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 24px;
     text-decoration: none;
     transition: color 0.2s, transform 0.2s; /* Aggiungi transizione per il colore e la trasformazione */
 }
 
 /* Ingrossa leggermente il simbolo al passaggio del mouse */
-.social-icon:hover {
-    color: #ff5733;
+.social-icon-fb:hover, .social-icon-tw:hover, .social-icon-in:hover, .social-icon-li:hover, .social-icon-gh:hover {
     transform: scale(1.2); /* Ingrossa il simbolo del 20% al passaggio del mouse */
 }
 
@@ -262,7 +324,7 @@ main img {
     color: #fff;
     font-size: 20px;
     background-color: #333;
-    padding: 10px;
+    padding: 8px 10px;
     border-radius: 50%;
     transition: color 0.2s, transform 0.2s; /* Aggiungi transizione per il colore e la trasformazione */
 }
@@ -285,7 +347,6 @@ main img {
     background-color: #6ab2ff; /* Sfondo blu per il tema notturno */
     border: none;
     border-radius: 50%;
-    padding: 10px;
     font-size: 20px; /* Dimensione del pulsante */
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
@@ -293,10 +354,14 @@ main img {
 
 /* Stili per il simbolo del sole */
 #theme-icon.fa-sun {
+    font-size: 24px;
+    padding: 8px 6px;
     color: #FFD700; /* Giallo per il sole */
 }
 
 /* Stili per il simbolo della luna */
 #theme-icon.fa-moon {
+    font-size: 24px;
+    padding: 8px;
     color: #e7e7e7; /* Bianco per la luna */
 }
