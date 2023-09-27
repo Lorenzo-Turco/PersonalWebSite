@@ -28,6 +28,8 @@ var headerTheme = document.getElementById('header'+currentPage);
 var containerTheme = document.getElementById('container'+currentPage);
 var subsectionsTheme = document.getElementById('subsections');
 var subsectionItems = document.querySelectorAll('.subsections ul li a');
+var subsectionsMobileTheme = document.getElementById('mobile-menu');
+var subsectionMobileItems = document.querySelectorAll('.mobile-menu ul li a');
 
 function darkModeManagement(isSwitch) {
     if(isSwitch) {
@@ -57,11 +59,21 @@ function lightMode() {
     containerTheme.style.color = '#333'; // Cambia il colore del testo per tema notturno
     headerTheme.style.background = `linear-gradient(45deg, rgb(255, 165, 0), rgb(55, 255, 0))`;
     headerTheme.style.color = '#333'; // Cambia il colore del testo per tema notturno
-    if(subsectionsTheme) {
-        subsectionsTheme.style.background = '#6bc4ffd8';
-        subsectionItems.forEach((item) => {
-            item.style.color = '#333';
-        });
+    const tresholdX = 768;
+    if(window.innerWidth > tresholdX) {
+        if(subsectionsTheme) {
+            subsectionsTheme.style.background = '#6bc4ffd8';
+            subsectionItems.forEach((item) => {
+                item.style.color = '#333';
+            });
+        }
+    } else {
+        if(subsectionsMobileTheme) {
+            subsectionsMobileTheme.style.background = '#6bc4ffd8';
+            subsectionItems.forEach((item) => {
+                item.style.color = '#333';
+            });
+        }
     }
 }
 
@@ -75,10 +87,20 @@ function darkMode() {
     containerTheme.style.color = '#e7e7e7'; // Testo bianco per tema diurno
     headerTheme.style.background = `linear-gradient(45deg, rgb(165, 100, 100), rgb(100, 120, 150))`;
     headerTheme.style.color = '#e7e7e7'; // Cambia il colore del testo per tema notturno
-    if(subsectionsTheme) {
-        subsectionsTheme.style.background = '#6aa55ad8';
-        subsectionItems.forEach((item) => {
-            item.style.color = '#e7e7e7';
-        });
+    const tresholdX = 768;
+    if(window.innerWidth > tresholdX) {
+        if(subsectionsTheme) {
+            subsectionsTheme.style.background = '#6aa55ad8';
+            subsectionItems.forEach((item) => {
+                item.style.color = '#e7e7e7';
+            });
+        }
+    } else {
+        if(subsectionsMobileTheme) {
+            subsectionsMobileTheme.style.background = '#6aa55ad8';
+            subsectionItems.forEach((item) => {
+                item.style.color = '#e7e7e7';
+            });
+        }
     }
 }
