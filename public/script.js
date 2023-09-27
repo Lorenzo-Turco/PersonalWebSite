@@ -14,7 +14,7 @@ var themeIcon = document.getElementById('theme-icon');
 function setThemeFromSessionStorage() {
     const theme = sessionStorage.getItem('theme');
     if (theme === 'dark') {
-        document.body.classList.toggle('dark-theme');
+        document.body.classList.add('dark-theme');
     }
     darkModeManagement(false);
 }

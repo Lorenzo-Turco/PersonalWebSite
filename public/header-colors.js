@@ -7,7 +7,7 @@ var headerTheme = document.getElementById('header'+currentPageForHeader);
 
 function followMouse(event) {
     const mouseX = event.clientX / window.innerWidth;
-    const shapeSize = 0.4;
+    const shapeSize = 0.5;
     var colorStart;
     var colorEnd;
     if (document.body.classList.contains('dark-theme')) {
