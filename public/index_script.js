@@ -22,8 +22,8 @@ themeToggle.addEventListener('click', () => {
     darkModeManagement(true);
 });
 
-var headerTheme = document.getElementById('header'+currentPage);
-var containerTheme = document.getElementById('container'+currentPage);
+var headerTheme = document.getElementById('header'+(currentPage ? currentPage : 'index'));
+var containerTheme = document.getElementById('container'+(currentPage ? currentPage : 'index'));
 var subsectionsTheme = document.getElementById('subsections');
 var subsectionItems = document.querySelectorAll('.subsections ul li a');
 var subsectionsMobileTheme = document.getElementById('mobile-menu');
