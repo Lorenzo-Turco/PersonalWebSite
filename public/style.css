@@ -365,3 +365,52 @@ main img {
     padding: 7px;
     color: #e7e7e7; /* Bianco per la luna */
 }
+
+/* Stile del popup */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Background scuro e traslucido */
+    z-index: 9999;
+}
+
+.popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #e7e7e7;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.popup-message {
+    text-wrap: wrap;
+}
+
+/* CSS per centrare il bottone verticalmente */
+.popup-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* Stile del bottone OK */
+#popup-ok-button {
+    background: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#popup-ok-button:hover {
+    background: #0056b3;
+}
