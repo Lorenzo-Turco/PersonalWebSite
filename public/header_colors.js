@@ -1,4 +1,4 @@
-/* header-colors */
+/* header_colors.js */
 
 const currentPageForHeader = window.location.pathname.split("/").pop().split(".")[0];
 

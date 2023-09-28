@@ -1,4 +1,4 @@
-/* script.js */
+/* index_script.js */
 
 const currentPage = window.location.pathname.split("/").pop().split(".")[0];
 
@@ -13,8 +13,13 @@ var themeIcon = document.getElementById('theme-icon');
 // Funzione per impostare il tema in base a sessionStorage
 function setThemeFromSessionStorage() {
     const theme = sessionStorage.getItem('theme');
+    if(theme == null) sessionStorage.setItem('theme', 'light');
     if (theme === 'dark') {
         document.body.classList.add('dark-theme');
+    } else {
+        if (document.body.classList.contains('dark-theme')) {
+            document.body.classList.remove('dark-theme');
+        }
     }
     darkModeManagement(false);
 }
@@ -30,8 +35,17 @@ var subsectionsTheme = document.getElementById('subsections');
 var subsectionItems = document.querySelectorAll('.subsections ul li a');
 var subsectionsMobileTheme = document.getElementById('mobile-menu');
 var subsectionMobileItems = document.querySelectorAll('.mobile-menu ul li a');
+var menuTextMobileTheme = document.querySelector('.menu-text');
+var barMobileItems = document.querySelectorAll('.bar');
+
+const tresholdX = 768;
 
 function darkModeManagement(isSwitch) {
+    if(window.innerWidth <= tresholdX) {
+        if(subsectionsTheme) {
+            subsectionsTheme.style.background = '#00000000';
+        }
+    }
     if(isSwitch) {
         if (document.body.classList.contains('dark-theme')) {
             sessionStorage.setItem('theme', 'light');
@@ -42,24 +56,27 @@ function darkModeManagement(isSwitch) {
         }
     } else {
         if (document.body.classList.contains('dark-theme')) {
+            sessionStorage.setItem('theme', 'dark');
             darkMode();
         } else {
+            sessionStorage.setItem('theme', 'light');
             lightMode();
         }
     }
 }
 
 function lightMode() {
-    document.body.classList.remove('dark-theme');
-    themeIcon.classList.remove('fa-moon');
-    themeIcon.classList.add('fa-sun');
+    if (document.body.classList.contains('dark-theme')) {
+        document.body.classList.remove('dark-theme');
+        themeIcon.classList.remove('fa-moon');
+        themeIcon.classList.add('fa-sun');
+    }
     themeToggle.style.backgroundColor = '#6ab2ff'; // Sfondo blu per tema diurno
     themeToggle.style.color = '#e7e7e7'; // Testo bianco per tema diurno
     containerTheme.style.background = `linear-gradient(to right, #e5e5e5, rgb(255, 165, 0))`;
     containerTheme.style.color = '#333'; // Cambia il colore del testo per tema notturno
     headerTheme.style.background = `linear-gradient(45deg, rgb(255, 165, 0), rgb(55, 255, 0))`;
     headerTheme.style.color = '#333'; // Cambia il colore del testo per tema notturno
-    const tresholdX = 768;
     if(window.innerWidth > tresholdX) {
         if(subsectionsTheme) {
             subsectionsTheme.style.background = '#6bc4ffd8';
@@ -70,24 +87,35 @@ function lightMode() {
     } else {
         if(subsectionsMobileTheme) {
             subsectionsMobileTheme.style.background = '#6bc4ffd8';
-            subsectionItems.forEach((item) => {
-                item.style.color = '#333';
+            if(subsectionItems) {
+                subsectionItems.forEach((item) => {
+                    item.style.color = '#333';
+                });
+            }
+        }
+        if(menuTextMobileTheme) {
+            menuTextMobileTheme.style.color = '#333';
+        }
+        if(barMobileItems) {
+            barMobileItems.forEach((item) => {
+                item.style.background = '#333';
             });
         }
     }
 }
 
 function darkMode() {
-    document.body.classList.add('dark-theme');
-    themeIcon.classList.remove('fa-sun');
-    themeIcon.classList.add('fa-moon');
+    if (!document.body.classList.contains('dark-theme')) {
+        document.body.classList.add('dark-theme');
+        themeIcon.classList.remove('fa-sun');
+        themeIcon.classList.add('fa-moon');
+    }
     themeToggle.style.backgroundColor = '#002eff'; // Sfondo giallo per tema notturno
     themeToggle.style.color = '#333'; // Cambia il colore del testo per tema notturno
     containerTheme.style.background = `linear-gradient(to right, #818181, rgb(165, 100, 100))`;
     containerTheme.style.color = '#e7e7e7'; // Testo bianco per tema diurno
     headerTheme.style.background = `linear-gradient(45deg, rgb(165, 100, 100), rgb(100, 120, 150))`;
     headerTheme.style.color = '#e7e7e7'; // Cambia il colore del testo per tema notturno
-    const tresholdX = 768;
     if(window.innerWidth > tresholdX) {
         if(subsectionsTheme) {
             subsectionsTheme.style.background = '#6aa55ad8';
@@ -98,8 +126,18 @@ function darkMode() {
     } else {
         if(subsectionsMobileTheme) {
             subsectionsMobileTheme.style.background = '#6aa55ad8';
-            subsectionItems.forEach((item) => {
-                item.style.color = '#e7e7e7';
+            if(subsectionItems) {
+                subsectionItems.forEach((item) => {
+                    item.style.color = '#e7e7e7';
+                });
+            }
+        }
+        if(menuTextMobileTheme) {
+            menuTextMobileTheme.style.color = '#e7e7e7';
+        }
+        if(barMobileItems) {
+            barMobileItems.forEach((item) => {
+                item.style.background = '#e7e7e7';
             });
         }
     }
