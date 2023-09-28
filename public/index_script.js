@@ -11,16 +11,9 @@ var themeToggle = document.getElementById('theme-toggle');
 var themeIcon = document.getElementById('theme-icon');
 
 // Funzione per impostare il tema in base a sessionStorage
-function setThemeFromSessionStorage() {
+function setThemeFromSessionStorage() {                                                                   
     const theme = sessionStorage.getItem('theme');
     if(theme == null) sessionStorage.setItem('theme', 'light');
-    if (theme === 'dark') {
-        document.body.classList.add('dark-theme');
-    } else {
-        if (document.body.classList.contains('dark-theme')) {
-            document.body.classList.remove('dark-theme');
-        }
-    }
     darkModeManagement(false);
 }
 
@@ -46,20 +39,17 @@ function darkModeManagement(isSwitch) {
             subsectionsTheme.style.background = '#00000000';
         }
     }
+    const theme = sessionStorage.getItem('theme');
     if(isSwitch) {
-        if (document.body.classList.contains('dark-theme')) {
-            sessionStorage.setItem('theme', 'light');
+        if (theme === 'dark') {
             lightMode();
         } else {
-            sessionStorage.setItem('theme', 'dark');
             darkMode();
         }
     } else {
-        if (document.body.classList.contains('dark-theme')) {
-            sessionStorage.setItem('theme', 'dark');
+        if (theme === 'dark') {
             darkMode();
         } else {
-            sessionStorage.setItem('theme', 'light');
             lightMode();
         }
     }
@@ -102,6 +92,7 @@ function lightMode() {
             });
         }
     }
+    sessionStorage.setItem('theme', 'light');
 }
 
 function darkMode() {
@@ -141,4 +132,5 @@ function darkMode() {
             });
         }
     }
+    sessionStorage.setItem('theme', 'dark');
 }
