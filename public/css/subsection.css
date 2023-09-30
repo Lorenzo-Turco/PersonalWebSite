@@ -1,11 +1,6 @@
-/* sottosezione.css */
+/* subsection.css */
 
-h2 {
-    color: #333;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Ombra del testo */
-}
-
-h1, h2, p {
+h1, h2, h3, p {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -75,4 +70,28 @@ tbody tr:nth-child(even) {
 .alpha-symbol {
     color: rgb(255, 0, 0); /* Colore rosso per il simbolo */
     font-size: 25px; /* Imposta la dimensione del simbolo Alpha a 25px */
+}
+
+/* Stili per la sezione dei link esterni */
+.external-links {
+    text-align: left; /* Allinea il contenuto a sinistra */
+    margin-left: 20px; /* Aggiunge un margine sinistro per allineare il titolo e l'elenco */
+}
+
+/* Stili per il titolo */
+.external-links h2 {
+    font-size: 24px; /* Modifica la dimensione del titolo a tuo piacimento */
+    margin-bottom: 10px; /* Aggiungi uno spazio tra il titolo e l'elenco */
+}
+
+/* Stili per l'elenco puntato */
+.external-links ul {
+    list-style-type: disc; /* Usa una lista puntata con dei cerchi */
+    margin-left: 20px; /* Aggiungi un margine sinistro all'elenco */
+    padding-left: 0; /* Rimuovi il padding predefinito dell'elenco */
+}
+
+/* Stili per gli elementi dell'elenco */
+.external-links li {
+    margin-bottom: 5px; /* Aggiungi uno spazio tra gli elementi dell'elenco */
 }
