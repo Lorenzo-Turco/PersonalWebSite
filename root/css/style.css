@@ -8,6 +8,10 @@ h1 {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Ombra del testo */
 }
 
+p {
+    font-size: 20px;
+}
+
 h1, h2, p {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
