@@ -12,7 +12,7 @@
     <body>
         <div id="popup" class="popup">
             <div class="popup-content">
-                <p class="popup-message"><span style="color: red; font-size: 24px;">Warning!</span><br>Possible pre-alpha navigation bugs</p>
+                <p class="popup-message"><span style="color: red; font-size: 24px;" data-translate="warning"></span><p data-translate="warning-initial-popup"></p></p>
                 <div class="popup-button-container">
                     <button id="popup-ok-button">OK</button>
                 </div>
@@ -36,7 +36,11 @@
                             <a href="https://github.com/Lorenzo-Turco" class="social-icon-gh" target="_blank"><i class="fab fa-github"></i></a>
                         </div>
                     </div>
-                    <h1 class="main-title"><img src="resources/images/fez-image.png" width="50"> <i>Turco Page</i></h1>
+                    <div class="language-selector">
+                        <img src="resources/images/ita-flag-image.png" alt="ITA" id="ita-flag" class="language-flag" data-lang="ita">
+                        <img src="resources/images/eng-flag-image.png" alt="ENG" id="eng-flag" class="language-flag inactive-flag" data-lang="eng">
+                    </div>
+                    <h1 class="main-title"><img src="resources/images/fez-image.png" width="50" data-translate="home"> <i>Turco Page</i></h1>
                     <!-- Links alle sottosezioni -->
                     <div class="subsections" id="subsections">
                         <div class="mobile-menu-toggle" id="mobile-menu-toggle">
@@ -48,10 +52,10 @@
                             <div class="menu-text">Menù</div>
                         </div>
                         <ul>
-                            <li><a href="aboutme.html" id="aboutme">About Me <i class="fas fa-tools"></i></a></li>
-                            <li><a href="code.html" id="code">Code <i class="fas fa-tools"></i></a></li>
-                            <li><a href="videogame.html" id="videogame">Videogame <i class="fas fa-tools"></i></a></li>
-                            <li><a href="resources.html" id="resources">Resources <i class="fas fa-tools"></i></a></li>
+                            <li><a href="aboutme.html" id="aboutme" data-translate="about-me"></a><i class="fas fa-tools"></i></li>
+                            <li><a href="code.html" id="code" data-translate="code"></a><i class="fas fa-tools"></i></li>
+                            <li><a href="videogame.html" id="videogame" data-translate="videogame"></a><i class="fas fa-tools"></i></li>
+                            <li><a href="resources.html" id="resources" data-translate="resources"></a><i class="fas fa-tools"></i></li>
                         </ul>
                     </div>
                 </header>
@@ -60,13 +64,13 @@
             <main id="contenutoindex">
                 <div class="mobile-menu" id="mobile-menu">
                     <ul>
-                        <li><a href="aboutme.html" id="aboutme-mobile">About Me <i class="fas fa-tools"></i></a></li>
-                        <li><a href="code.html" id="code-mobile">Code <i class="fas fa-tools"></i></a></li>
-                        <li><a href="videogame.html" id="videogame-mobile">Videogame <i class="fas fa-tools"></i></a></li>
-                        <li><a href="resources.html" id="resources">Resources <i class="fas fa-tools"></i></a></li>
+                        <li><a href="aboutme.html" id="aboutme-mobile" data-translate="about-me"></a><i class="fas fa-tools"></i></li>
+                        <li><a href="code.html" id="code-mobile" data-translate="code"></a><i class="fas fa-tools"></i></li>
+                        <li><a href="videogame.html" id="videogame-mobile" data-translate="videogame"></a><i class="fas fa-tools"></i></li>
+                        <li><a href="resources.html" id="resources" data-translate="resources"></a><i class="fas fa-tools"></i></li>
                     </ul>
                 </div>
-                <p>Hi! I'm Lorenzo Turco and this is my Home Page. This is a pre-alpha site version and updates will follow!</p>
+                <p data-translate="welcome"></p>
                 <img src="resources/images/background-image.jpg" alt="under construction...">
             </main>
             <script src="resources/js/errors_popup.js"></script>

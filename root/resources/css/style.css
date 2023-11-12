@@ -342,7 +342,7 @@ main img {
 
 /* Stili per il tema notturno */
 .dark-theme {
-    background-color: #818181; /* Cambia il colore di sfondo a un grigio scuro */
+    background-color: #000; /* Cambia il colore di sfondo a un grigio scuro */
     color: #e7e7e7; /* Cambia il colore del testo a bianco */
     text-shadow: none; /* Rimuove l'ombra del testo */
 }
@@ -418,4 +418,27 @@ main img {
 
 #popup-ok-button:hover {
     background: #0056b3;
+}
+
+.language-selector {
+    text-align: left;
+    margin-top: 10px; /* Opzionale: Aggiunge uno spazio superiore per separare dalla sezione dei social icons */
+}
+
+/* Aggiorna lo stile per le immagini delle bandiere */
+.language-flag {
+    max-width: 30px; /* Imposta la larghezza massima delle bandiere */
+    height: auto; /* Mantiene le proporzioni originali */
+    cursor: pointer; /* Cambia il cursore al passaggio del mouse per indicare la cliccabilità */
+    margin: 0 2px; /* Aggiunge un margine tra le bandiere per separarle visivamente */
+    transition: filter 0.3s ease; /* Aggiungi una transizione per un effetto più fluido */
+}
+
+.language-flag:hover {
+    transform: scale(1.2);
+}
+
+/* Aggiungi uno stile per le bandiere non selezionate */
+.language-flag.inactive-flag {
+    filter: brightness(70%); /* Scurisci la bandiera non selezionata */
 }
