@@ -71,6 +71,7 @@ var translations = {
 // Chiamare le funzioni all'avvio della pagina
 window.addEventListener('DOMContentLoaded', function() {
     setThemeFromSessionStorage(); // Applica il tema memorizzato immediatamente
+    sessionStorage.setItem('currentLanguage', sessionStorage.getItem('currentLanguage') ? sessionStorage.getItem('currentLanguage') : 'ita');
     setLanguageFromSessionStorage(); // Imposta la lingua al caricamento della pagina
 });
 
@@ -238,12 +239,20 @@ document.querySelectorAll('.language-flag').forEach(function(flag) {
 
 // Funzione per impostare la lingua in base a sessionStorage
 function setLanguageFromSessionStorage() {
+    document.querySelectorAll('.language-flag').forEach(function(f) {
+        var currentLanguage = sessionStorage.getItem('currentLanguage');
+        if (f.getAttribute('data-lang') !== currentLanguage) {
+            f.classList.add('inactive-flag');
+        } else {
+            f.classList.remove('inactive-flag');
+        }
+    });
     updatePageLanguage();
 }
 
 // Funzione per aggiornare il testo in base alla lingua corrente
 function updatePageLanguage() {
-    var currentLanguage = sessionStorage.getItem('currentLanguage') || 'ita';
+    var currentLanguage = sessionStorage.getItem('currentLanguage');
     var elements = document.querySelectorAll('[data-translate]');
     
     elements.forEach(function(element) {
