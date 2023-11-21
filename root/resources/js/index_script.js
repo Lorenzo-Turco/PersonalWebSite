@@ -33,7 +33,16 @@ var translations = {
         "montecarlo-sims-desc": "Simulazione Montecarlo per ottimizzare l'allocazione di asset",
         "resources-github-tag": "Documenti GitHub",
         "resources-cv-tag": "CV",
-        "resources-certifications-tag": "Certificazioni"
+        "resources-certifications-tag": "Certificazioni",
+        "log-desc-v-0-6-0-a": "Aggiunto selettore della lingua",
+        "log-desc-v-0-5-0-a": "Aggiunte sezioni, link e contenuti",
+        "log-desc-v-0-4-0-a": "Migliorati nomi e sezioni",
+        "log-desc-v-0-3-2-a": "Corretti stili della dark mode e navigazione mobile",
+        "log-desc-v-0-3-1-a": "Aggiunto popup di avviso e corretti problemi della dark mode",
+        "log-desc-v-0-3-0-a": "Aggiunta dark mode e migliorati icone social",
+        "log-desc-v-0-2-1-a": "Migliorati grafica del menù desktop e mobile",
+        "log-desc-v-0-2-0-a": "Migliorato menù mobile",
+        "log-desc-v-0-1-0-a": "Prima struttura"
     },
     "eng": {
         "home": "Home",
@@ -64,7 +73,16 @@ var translations = {
         "montecarlo-sims-desc": "Portfoglio Montecarlo simulation for opmimize the assets allocation",
         "resources-github-tag": "GitHub Documents",
         "resources-cv-tag": "CV",
-        "resources-certifications-tag": "Certifications"
+        "resources-certifications-tag": "Certifications",
+        "log-desc-v-0-6-0-a": "Added language switch",
+        "log-desc-v-0-5-0-a": "Added contents, links and sections",
+        "log-desc-v-0-4-0-a": "Enhanced names and sections",
+        "log-desc-v-0-3-2-a": "Fixed dark mode styles and mobile navigation",
+        "log-desc-v-0-3-1-a": "Added popup warning and fixed dark mode issues",
+        "log-desc-v-0-3-0-a": "Added dark mode and enhanced social icons",
+        "log-desc-v-0-2-1-a": "Enhanced desktop and mobile menù graphics",
+        "log-desc-v-0-2-0-a": "Enhanced mobile menù",
+        "log-desc-v-0-1-0-a": "First structure"
     }
 };
 
