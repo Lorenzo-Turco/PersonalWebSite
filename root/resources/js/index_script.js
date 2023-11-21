@@ -2,7 +2,7 @@
 
 const currentPage = window.location.pathname.split("/").pop().split(".")[0];
 
-// Oggetto delle traduzioni per testo multilingue
+// Object for multilingual text translations
 var translations = {
     "ita": {
         "home": "Home",
@@ -68,30 +68,30 @@ var translations = {
     }
 };
 
-// Chiamare le funzioni all'avvio della pagina
+// Call functions on page load
 window.addEventListener('DOMContentLoaded', function() {
-    setThemeFromSessionStorage(); // Applica il tema memorizzato immediatamente
+    setThemeFromSessionStorage(); // Apply the stored theme immediately
     sessionStorage.setItem('currentLanguage', sessionStorage.getItem('currentLanguage') ? sessionStorage.getItem('currentLanguage') : 'ita');
-    setLanguageFromSessionStorage(); // Imposta la lingua al caricamento della pagina
+    setLanguageFromSessionStorage(); // Set the language on page load
 });
 
 var themeToggle = document.getElementById('theme-toggle');
 var themeIcon = document.getElementById('theme-icon');
 
-// Funzione per impostare il tema in base a sessionStorage
+// Function to set the theme based on sessionStorage
 function setThemeFromSessionStorage() {                                                                   
     const theme = sessionStorage.getItem('theme');
     if(theme == null) sessionStorage.setItem('theme', 'light');
     darkModeManagement(false);
 }
 
-// Aggiungi un gestore di eventi al pulsante
+// Add an event handler to the button
 themeToggle.addEventListener('click', () => {
     darkModeManagement(true);
 });
 
-var headerTheme = document.getElementById('header'+(currentPage ? currentPage : 'index'));
-var containerTheme = document.getElementById('container'+(currentPage ? currentPage : 'index'));
+var headerTheme = document.getElementById('header' + (currentPage ? currentPage : 'index'));
+var containerTheme = document.getElementById('container' + (currentPage ? currentPage : 'index'));
 var subsectionsTheme = document.getElementById('subsections');
 var subsectionItems = document.querySelectorAll('.subsections ul li a');
 var subsectionsMobileTheme = document.getElementById('mobile-menu');
@@ -135,12 +135,12 @@ function lightMode() {
         themeIcon.classList.remove('fa-moon');
         themeIcon.classList.add('fa-sun');
     }
-    themeToggle.style.backgroundColor = '#6ab2ff'; // Sfondo blu per tema diurno
-    themeToggle.style.color = itemDarkColor; // Testo bianco per tema diurno
+    themeToggle.style.backgroundColor = '#6ab2ff'; // Blue background for light theme
+    themeToggle.style.color = itemDarkColor; // White text for light theme
     containerTheme.style.background = `linear-gradient(to right, #e5e5e5, rgb(255, 165, 0))`;
-    containerTheme.style.color = itemLightColor; // Cambia il colore del testo per tema notturno
+    containerTheme.style.color = itemLightColor; // Change text color for dark mode
     headerTheme.style.background = `linear-gradient(45deg, rgb(255, 165, 0), rgb(55, 255, 0))`;
-    headerTheme.style.color = itemLightColor; // Cambia il colore del testo per tema notturno
+    headerTheme.style.color = itemLightColor; // Change text color for dark mode
     if(tableTheme) {
         tableTheme.style.background = `linear-gradient(to bottom, #d59a07, #f6d30d)`;
         tableTheme.style.color = itemLightColor;
@@ -179,12 +179,12 @@ function darkMode() {
         themeIcon.classList.remove('fa-sun');
         themeIcon.classList.add('fa-moon');
     }
-    themeToggle.style.backgroundColor = '#002eff'; // Sfondo giallo per tema notturno
-    themeToggle.style.color = itemLightColor; // Cambia il colore del testo per tema notturno
+    themeToggle.style.backgroundColor = '#002eff'; // Yellow background for dark theme
+    themeToggle.style.color = itemLightColor; // Change text color for dark mode
     containerTheme.style.background = `linear-gradient(to right, #000, rgb(165, 100, 100))`;
-    containerTheme.style.color = itemDarkColor; // Testo bianco per tema diurno
+    containerTheme.style.color = itemDarkColor; // White text for light mode
     headerTheme.style.background = `linear-gradient(45deg, rgb(165, 100, 100), rgb(100, 120, 150))`;
-    headerTheme.style.color = itemDarkColor; // Cambia il colore del testo per tema notturno
+    headerTheme.style.color = itemDarkColor; // Change text color for dark mode
     if(tableTheme) {
         tableTheme.style.background = `linear-gradient(to bottom, #d59a07, #655600)`;
         tableTheme.style.color = itemDarkColor;
@@ -217,7 +217,7 @@ function darkMode() {
     sessionStorage.setItem('theme', 'dark');
 }
 
-// Funzione per aggiornare la lingua quando si clicca su una bandiera
+// Function to update the language when clicking on a flag
 function updateLanguage(flag) {
     document.querySelectorAll('.language-flag').forEach(function(f) {
         if (f !== flag) {
@@ -225,19 +225,19 @@ function updateLanguage(flag) {
         } else {
             f.classList.remove('inactive-flag');
             sessionStorage.setItem('currentLanguage', flag.getAttribute('data-lang'));
-            updatePageLanguage(); // Aggiorna il testo nella nuova lingua
+            updatePageLanguage(); // Update text in the new language
         }
     });
 }
 
-// Gestore di eventi per il cambio di lingua tramite bandiere
+// Event handler for language change via flags
 document.querySelectorAll('.language-flag').forEach(function(flag) {
     flag.addEventListener('click', function() {
         updateLanguage(flag);
     });
 });
 
-// Funzione per impostare la lingua in base a sessionStorage
+// Function to set the language based on sessionStorage
 function setLanguageFromSessionStorage() {
     document.querySelectorAll('.language-flag').forEach(function(f) {
         var currentLanguage = sessionStorage.getItem('currentLanguage');
@@ -250,7 +250,7 @@ function setLanguageFromSessionStorage() {
     updatePageLanguage();
 }
 
-// Funzione per aggiornare il testo in base alla lingua corrente
+// Function to update text based on the current language
 function updatePageLanguage() {
     var currentLanguage = sessionStorage.getItem('currentLanguage');
     var elements = document.querySelectorAll('[data-translate]');

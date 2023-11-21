@@ -1,10 +1,11 @@
 /* menu.js */
 
-// Toggle della classe "active" per il menu mobile// Seleziona l'elemento del toggle del menu, l'icona del menu e il menu mobile
+// Toggle the "active" class for the mobile menu
+// Select the menu toggle element, menu icon, and mobile menu
 var menuToggle = document.getElementById("mobile-menu-toggle");
 
-// Aggiungi un listener al click sull'elemento del toggle del menu
-if(menuToggle) {
+// Add a click listener to the menu toggle element
+if (menuToggle) {
     menuToggle.addEventListener("click", function () {
         var menuIcon = menuToggle.querySelector(".menu-icon");
         var mobileMenu = document.getElementById("mobile-menu");
@@ -12,13 +13,13 @@ if(menuToggle) {
         menuIcon.classList.toggle("active");
     });
 
-    // Chiudi il menu mobile se si fa clic altrove sulla pagina
+    // Close the mobile menu if clicked elsewhere on the page
     window.addEventListener("click", function (e) {
         var menuIcon = menuToggle.querySelector(".menu-icon");
         var mobileMenu = document.getElementById("mobile-menu");
         if (!menuToggle.contains(e.target) && !mobileMenu.contains(e.target)) {
             mobileMenu.classList.remove("active");
-            menuIcon.classList.remove("active"); // Rimuovi anche la classe "active" dall'icona
+            menuIcon.classList.remove("active"); // Also remove the "active" class from the icon
         }
     });
 }

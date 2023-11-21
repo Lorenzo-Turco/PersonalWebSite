@@ -5,7 +5,7 @@ body {
 }
 
 h1 {
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Ombra del testo */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Text shadow */
 }
 
 p {
@@ -16,7 +16,7 @@ h1, h2, p {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Stili per il contenitore principale */
+/* Styles for the main container */
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -28,14 +28,14 @@ h1, h2, p {
     background: linear-gradient(to right, #e5e5e5, rgb(255, 165, 0));
 }
 
-/* Stili per l'header (intestazione) */
+/* Styles for the header */
 .header {
     text-align: center;
     padding: 15px 20px;
     color: #333;
     border-radius: 20px;
-    background: linear-gradient(45deg, rgb(255, 165, 0), rgb(55, 255, 0)); /* Sfondo arancione sfumato verso il verde */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Aggiungi un'ombra sfocata */
+    background: linear-gradient(45deg, rgb(255, 165, 0), rgb(55, 255, 0)); /* Orange to green gradient background */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a blurred shadow */
 }
 
 .header-icons {
@@ -44,7 +44,7 @@ h1, h2, p {
     justify-content: space-between;
 }
 
-/* Stili per il titolo principale */
+/* Styles for the main title */
 .main-title {
     font-size: 50px;
     margin-bottom: 20px;
@@ -62,16 +62,16 @@ h1, h2, p {
     z-index: 1;
 }
 
-/* Stili per il menu quando la larghezza è superiore a 768px */
+/* Styles for the menu when width is greater than 768px */
 @media (min-width: 769px) {
-    
+
     .mobile-menu {
-        display: none; /* Nascondi il menu mobile sopra la soglia */
+        display: none; /* Hide the mobile menu above the threshold */
     }
-    
-    /* Stili per il testo "Menù" */
+
+    /* Styles for the "Menu" text */
     .menu-text {
-        display: none; /* Nascondi il menu mobile sopra la soglia */
+        display: none; /* Hide the mobile menu text above the threshold */
     }
 
     .subsections {
@@ -113,35 +113,35 @@ h1, h2, p {
     }
 }
 
-/* Stili per il menu quando la larghezza è inferiore o uguale a 768px */
+/* Styles for the menu when width is less than or equal to 768px */
 @media (max-width: 768px) {
 
-    /* Stili per l'icona hamburger */
+    /* Styles for the hamburger icon */
     .menu-icon {
         font-size: 24px;
         display: block;
         position: relative;
         cursor: pointer;
     }
-    
-    /* Aggiungi stili per il contenitore del testo "Menù" e l'icona */
+
+    /* Add styles for the text "Menu" container and icon */
     .mobile-menu-toggle {
-        display: flex; /* Usa un layout flexbox */
-        align-items: center; /* Allinea verticalmente al centro */
+        display: flex; /* Use flexbox layout */
+        align-items: center; /* Vertically align center */
     }
-    
-    /* Stili per il testo "Menù" */
+
+    /* Styles for the "Menu" text */
     .menu-text {
         font-size: 20px;
         color: #333;
-        margin-left: 10px; /* Aggiungi spazio tra l'icona e il testo */
+        margin-left: 10px; /* Add space between the icon and the text */
     }
 
     .subsections ul li {
         display: none;
     }
 
-    /* Stili per le linee dell'icona */
+    /* Styles for the lines of the icon */
     .bar {
         width: 25px;
         height: 3px;
@@ -150,41 +150,41 @@ h1, h2, p {
         transition: 0.4s;
     }
 
-    /* Stili per l'icona del menu mobile (X) */
+    /* Styles for the mobile menu icon (X) */
     .menu-icon.active .bar:nth-child(1) {
         transform: rotate(-45deg) translate(-5px, 5px);
         width: 25px;
-        top: 12px; /* Regola la posizione delle linee per ottenere l'aspetto di una "X" */
+        top: 12px; /* Adjust the position of the lines to achieve an "X" appearance */
     }
-    
+
     .menu-icon.active .bar:nth-child(2) {
         opacity: 0;
     }
-    
+
     .menu-icon.active .bar:nth-child(3) {
         transform: rotate(45deg) translate(-5px, -5px);
         width: 25px;
-        top: 12px; /* Regola la posizione delle linee per ottenere l'aspetto di una "X" */
+        top: 12px; /* Adjust the position of the lines to achieve an "X" appearance */
     }
 
-    /* Rimuovi la trasformazione del menu mobile */
+    /* Remove the transformation of the mobile menu */
     .mobile-menu.active {
         display: block;
         transform: translateY(0%);
     }
-    
-    /* Stili per il menu mobile */
+
+    /* Styles for the mobile menu */
     .mobile-menu {
-        display: none; /* Nascondi il menu mobile inizialmente */
+        display: none; /* Initially hide the mobile menu */
         position: relative;
         background-color: #6bc4ffd8;
         padding: 5px;
         border-radius: 20px;
-        z-index: 1; /* Imposta uno z-index superiore per far sovrapporre il menu mobile */
-        transform: translateY(-100%); /* Muovi il menu mobile verso l'alto, inizialmente nascosto */
-        transition: transform 0.3s ease-in-out; /* Aggiungi una transizione per un effetto di scorrimento */
-        width: 150px; /* Rendi il menu mobile largo quanto il contenitore */
-        max-width: 150px; /* Larghezza massima del menu mobile */
+        z-index: 1; /* Set a higher z-index to overlap the mobile menu */
+        transform: translateY(-100%); /* Move the mobile menu upwards, initially hidden */
+        transition: transform 0.3s ease-in-out; /* Add a transition for a sliding effect */
+        width: 150px; /* Make the mobile menu as wide as the container */
+        max-width: 150px; /* Maximum width of the mobile menu */
         top: -1.5rem;
         left: 1.3rem;
     }
@@ -209,7 +209,7 @@ h1, h2, p {
         padding: 5px 10px;
         border: 1px solid transparent;
         border-radius: 20px;
-        max-width: 200px; /* Larghezza massima del menu */
+        max-width: 200px; /* Maximum width of the menu */
     }
 
     .mobile-menu ul li a:hover {
@@ -217,28 +217,27 @@ h1, h2, p {
         color: #ffffff;
         border-color: #333;
     }
-
 }
 
-/* Stili per il contenuto principale con immagine */
+/* Styles for the main content with an image */
 main {
-    flex-grow: 1; /* Flessibile per occupare lo spazio rimanente */
+    flex-grow: 1; /* Flexible to occupy the remaining space */
     text-align: center;
 }
 
 main img {
-    max-width: 100%; /* Massima larghezza dell'immagine al 100% della larghezza del contenuto principale */
-    height: auto; /* Impedisce la distorsione dell'immagine */
+    max-width: 100%; /* Maximum image width at 100% of the main content width */
+    height: auto; /* Prevents image distortion */
 }
 
-/* Stili per l'effetto di hover sui link nella landing page */
+/* Styles for the hover effect on links in the landing page */
 .nav ul li:hover {
-    background-color: #ffa500; /* Colore di sfondo al passaggio del mouse (arancione) */
-    color: #fff; /* Colore del testo al passaggio del mouse (bianco) */
-    border-radius: 20px; /* Aggiungi bordi smussati */
+    background-color: #ffa500; /* Background color on mouse hover (orange) */
+    color: #fff; /* Text color on mouse hover (white) */
+    border-radius: 20px; /* Add rounded borders */
 }
 
-/* Stili per i social icons */
+/* Styles for social icons */
 .social-icons {
     position: relative;
     padding: 5px;
@@ -250,79 +249,79 @@ main img {
 .social-icon-fb {
     color: white;
     background-color: #0866FF;
-    border-radius: 50%; /* Rendi il bordo circolare */
-    width: 35px; /* Imposta la larghezza */
-    height: 35px; /* Imposta l'altezza */
+    border-radius: 50%; /* Make the border circular */
+    width: 35px; /* Set the width */
+    height: 35px; /* Set the height */
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 24px;
     text-decoration: none;
-    transition: color 0.2s, transform 0.2s; /* Aggiungi transizione per il colore e la trasformazione */
+    transition: color 0.2s, transform 0.2s; /* Add transition for color and transformation */
 }
 
 .social-icon-tw {
     color: #ffffff;
     background-color: black;
-    border-radius: 50%; /* Rendi il bordo circolare */
-    width: 35px; /* Imposta la larghezza */
-    height: 35px; /* Imposta l'altezza */
+    border-radius: 50%; /* Make the border circular */
+    width: 35px; /* Set the width */
+    height: 35px; /* Set the height */
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 24px;
     text-decoration: none;
-    transition: color 0.2s, transform 0.2s; /* Aggiungi transizione per il colore e la trasformazione */
+    transition: color 0.2s, transform 0.2s; /* Add transition for color and transformation */
 }
 
 .social-icon-in {
     color: white;
-    border-radius: 50%; /* Rendi il bordo circolare */
-    width: 35px; /* Imposta la larghezza */
-    height: 35px; /* Imposta l'altezza */
+    border-radius: 50%; /* Make the border circular */
+    width: 35px; /* Set the width */
+    height: 35px; /* Set the height */
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 24px;
     text-decoration: none;
-    transition: color 0.2s, transform 0.2s; /* Aggiungi transizione per il colore e la trasformazione */
-	background-image: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);  
+    transition: color 0.2s, transform 0.2s; /* Add transition for color and transformation */
+    background-image: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
 }
 
 .social-icon-li {
     color: #ffffff;
     background-color: #0a66c2;
-    border-radius: 50%; /* Rendi il bordo circolare */
-    width: 35px; /* Imposta la larghezza */
-    height: 35px; /* Imposta l'altezza */
+    border-radius: 50%; /* Make the border circular */
+    width: 35px; /* Set the width */
+    height: 35px; /* Set the height */
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 24px;
     text-decoration: none;
-    transition: color 0.2s, transform 0.2s; /* Aggiungi transizione per il colore e la trasformazione */
+    transition: color 0.2s, transform 0.2s; /* Add transition for color and transformation */
 }
 
 .social-icon-gh {
     color: black;
     background-color: white;
-    border-radius: 50%; /* Rendi il bordo circolare */
-    width: 35px; /* Imposta la larghezza */
-    height: 35px; /* Imposta l'altezza */
+    border-radius: 50%; /* Make the border circular */
+    width: 35px; /* Set the width */
+    height: 35px; /* Set the height */
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 24px;
     text-decoration: none;
-    transition: color 0.2s, transform 0.2s; /* Aggiungi transizione per il colore e la trasformazione */
+    transition: color 0.2s, transform 0.2s; /* Add transition for color and transformation */
 }
 
-/* Ingrossa leggermente il simbolo al passaggio del mouse */
+/* Slightly enlarge the symbol on hover */
 .social-icon-fb:hover, .social-icon-tw:hover, .social-icon-in:hover, .social-icon-li:hover, .social-icon-gh:hover {
-    transform: scale(1.2); /* Ingrossa il simbolo del 20% al passaggio del mouse */
+    transform: scale(1.2); /* Enlarge the symbol by 20% on hover */
 }
 
-/* Stile per il link ai log del sito */
+/* Style for the link to site logs */
 .log-link {
     position: relative;
     text-decoration: none;
@@ -331,47 +330,47 @@ main img {
     background-color: #333;
     padding: 8px 10px;
     border-radius: 50%;
-    transition: color 0.2s, transform 0.2s; /* Aggiungi transizione per il colore e la trasformazione */
+    transition: color 0.2s, transform 0.2s; /* Add transition for color and transformation */
 }
 
 .log-link:hover {
-    background-color: #686868; /* Cambia il colore di sfondo al passaggio del mouse */
+    background-color: #686868; /* Change background color on hover */
     color: #3eda00;
-    transform: scale(1.2); /* Ingrossa il simbolo del 20% al passaggio del mouse */
+    transform: scale(1.2); /* Enlarge the symbol by 20% on hover */
 }
 
-/* Stili per il tema notturno */
+/* Styles for the dark theme */
 .dark-theme {
-    background-color: #000; /* Cambia il colore di sfondo a un grigio scuro */
-    color: #e7e7e7; /* Cambia il colore del testo a bianco */
-    text-shadow: none; /* Rimuove l'ombra del testo */
+    background-color: #000; /* Change background color to dark gray */
+    color: #e7e7e7; /* Change text color to white */
+    text-shadow: none; /* Remove text shadow */
 }
 
-/* Stili per il pulsante di cambio tema */
+/* Styles for the theme toggle button */
 .theme-toggle-button {
-    background-color: #6ab2ff; /* Sfondo blu per il tema notturno */
+    background-color: #6ab2ff; /* Blue background for the dark theme */
     border: none;
     border-radius: 50%;
-    font-size: 20px; /* Dimensione del pulsante */
+    font-size: 20px; /* Button size */
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Stili per il simbolo del sole */
+/* Styles for the sun symbol */
 #theme-icon.fa-sun {
     font-size: 24px;
     padding: 7px 3px;
-    color: #FFD700; /* Giallo per il sole */
+    color: #FFD700; /* Yellow for the sun */
 }
 
-/* Stili per il simbolo della luna */
+/* Styles for the moon symbol */
 #theme-icon.fa-moon {
     font-size: 24px;
     padding: 7px;
-    color: #e7e7e7; /* Bianco per la luna */
+    color: #e7e7e7; /* White for the moon */
 }
 
-/* Stile del popup */
+/* Style of the popup */
 .popup {
     display: none;
     position: fixed;
@@ -379,7 +378,7 @@ main img {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.7); /* Background scuro e traslucido */
+    background: rgba(0, 0, 0, 0.7); /* Dark and translucent background */
     z-index: 9999;
 }
 
@@ -395,10 +394,10 @@ main img {
 }
 
 .popup-message {
-    text-wrap: wrap;
+    white-space: wrap;
 }
 
-/* CSS per centrare il bottone verticalmente */
+/* CSS to center the button vertically */
 .popup-button-container {
     display: flex;
     justify-content: center;
@@ -406,7 +405,7 @@ main img {
     height: 100%;
 }
 
-/* Stile del bottone OK */
+/* Style of the OK button */
 #popup-ok-button {
     background: #007BFF;
     color: #fff;
@@ -422,23 +421,23 @@ main img {
 
 .language-selector {
     text-align: left;
-    margin-top: 10px; /* Opzionale: Aggiunge uno spazio superiore per separare dalla sezione dei social icons */
+    margin-top: 10px; /* Optional: Add top margin to separate from the social icons section */
 }
 
-/* Aggiorna lo stile per le immagini delle bandiere */
+/* Update style for flag images */
 .language-flag {
-    max-width: 30px; /* Imposta la larghezza massima delle bandiere */
-    height: auto; /* Mantiene le proporzioni originali */
-    cursor: pointer; /* Cambia il cursore al passaggio del mouse per indicare la cliccabilità */
-    margin: 0 2px; /* Aggiunge un margine tra le bandiere per separarle visivamente */
-    transition: filter 0.3s ease; /* Aggiungi una transizione per un effetto più fluido */
+    max-width: 30px; /* Set maximum width of flags */
+    height: auto; /* Maintain original proportions */
+    cursor: pointer; /* Change cursor on hover to indicate clickability */
+    margin: 0 2px; /* Add margin between flags to visually separate them */
+    transition: filter 0.3s ease; /* Add transition for a smoother effect */
 }
 
 .language-flag:hover {
     transform: scale(1.2);
 }
 
-/* Aggiungi uno stile per le bandiere non selezionate */
+/* Add a style for inactive flags */
 .language-flag.inactive-flag {
-    filter: brightness(70%); /* Scurisci la bandiera non selezionata */
+    filter: brightness(70%); /* Darken the inactive flag */
 }

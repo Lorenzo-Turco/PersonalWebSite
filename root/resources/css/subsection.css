@@ -4,7 +4,7 @@ h1, h2, h3, p {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Stili per il titolo principale */
+/* Styles for the main title */
 .main-title-subsections {
     font-size: 50px;
     margin-bottom: 20px;
@@ -12,42 +12,42 @@ h1, h2, h3, p {
     position: relative;
 }
 
-/* Stili per il bottone Home */
+/* Styles for the Home button */
 .home-button-subsection {
     position: relative;
     text-decoration: none;
     background-color: #333;
     color: #fff;
     border-radius: 50%;
-    padding: 10px; /* Aumenta il padding per aumentare la dimensione */
+    padding: 10px; /* Increase padding to increase the size */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* Stili per l'icona */
+/* Styles for the icon */
 .home-button-subsection i {
-    margin-right: 0; /* Rimuovi il margine destro dell'icona */
-    font-size: 20px; /* Aumenta la dimensione dell'icona */
+    margin-right: 0; /* Remove the right margin of the icon */
+    font-size: 20px; /* Increase the size of the icon */
 }
 
-/* Stili per la tabella e il suo contenitore */
+/* Styles for the table and its container */
 .table-container {
-    overflow-x: auto; /* Abilita la barra di scorrimento orizzontale se la tabella è troppo larga per lo schermo */
+    overflow-x: auto; /* Enable horizontal scroll bar if the table is too wide for the screen */
     margin-top: 20px;
 }
 
-/* Aggiungi uno sfondo gradient alla tabella */
+/* Add a gradient background to the table */
 table {
     width: 100%;
     border-collapse: collapse;
-    background: linear-gradient(to bottom, #d59a07, #f6d30d); /* Colore di sfondo gradient */
-    color: #000000; /* Colore del testo */
+    background: linear-gradient(to bottom, #d59a07, #f6d30d); /* Gradient background color */
+    color: #000000; /* Text color */
 }
 
-/* Stili per le intestazioni delle colonne */
+/* Styles for column headers */
 thead {
-    background-color: rgba(102, 87, 0, 0.533); /* Sfondo semi-trasparente per le intestazioni */
+    background-color: rgba(102, 87, 0, 0.533); /* Semi-transparent background for headers */
 }
 
 th {
@@ -55,43 +55,43 @@ th {
     padding: 10px;
 }
 
-/* Stili per le celle della tabella */
+/* Styles for table cells */
 td {
     border: 1px solid #ddd;
     padding: 10px;
 }
 
-/* Stili per le righe pari della tabella */
+/* Styles for even rows of the table */
 tbody tr:nth-child(even) {
-    background-color: rgba(255, 255, 255, 0.1); /* Sfondo semi-trasparente per le righe pari */
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background for even rows */
 }
 
-/* Stili per il simbolo Alpha rosso */
+/* Styles for the red Alpha symbol */
 .alpha-symbol {
-    color: rgb(255, 0, 0); /* Colore rosso per il simbolo */
-    font-size: 25px; /* Imposta la dimensione del simbolo Alpha a 25px */
+    color: rgb(255, 0, 0); /* Red color for the Alpha symbol */
+    font-size: 25px; /* Set the size of the Alpha symbol to 25px */
 }
 
-/* Stili per la sezione dei link esterni */
+/* Styles for the section of external links */
 .external-links {
-    text-align: left; /* Allinea il contenuto a sinistra */
-    margin-left: 20px; /* Aggiunge un margine sinistro per allineare il titolo e l'elenco */
+    text-align: left; /* Align content to the left */
+    margin-left: 20px; /* Add left margin to align the title and the list */
 }
 
-/* Stili per il titolo */
+/* Styles for the title */
 .external-links h2 {
-    font-size: 24px; /* Modifica la dimensione del titolo a tuo piacimento */
-    margin-bottom: 10px; /* Aggiungi uno spazio tra il titolo e l'elenco */
+    font-size: 24px; /* Modify the size of the title as desired */
+    margin-bottom: 10px; /* Add space between the title and the list */
 }
 
-/* Stili per l'elenco puntato */
+/* Styles for the bulleted list */
 .external-links ul {
-    list-style-type: disc; /* Usa una lista puntata con dei cerchi */
-    margin-left: 20px; /* Aggiungi un margine sinistro all'elenco */
-    padding-left: 0; /* Rimuovi il padding predefinito dell'elenco */
+    list-style-type: disc; /* Use a bulleted list with circles */
+    margin-left: 20px; /* Add left margin to the list */
+    padding-left: 0; /* Remove default list padding */
 }
 
-/* Stili per gli elementi dell'elenco */
+/* Styles for list items */
 .external-links li {
-    margin-bottom: 5px; /* Aggiungi uno spazio tra gli elementi dell'elenco */
+    margin-bottom: 5px; /* Add space between list items */
 }

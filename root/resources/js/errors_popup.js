@@ -1,32 +1,32 @@
 /* errors_popup.js */
 
 document.addEventListener("DOMContentLoaded", function () {
-    // Verifica se il flag "popupShown" è presente in sessionStorage
+    // Check if the "popupShown" flag is present in sessionStorage
     var popupShown = sessionStorage.getItem("popupShown");
 
-    // Riferimento al popup
+    // Reference to the popup
     var popup = document.getElementById("popup");
 
-    // Riferimento al bottone OK
+    // Reference to the OK button
     var okButton = document.getElementById("popup-ok-button");
 
-    // Funzione per chiudere il popup
+    // Function to close the popup
     function closePopup() {
-        // Nascondi il popup
+        // Hide the popup
         popup.style.display = "none";
         
-        // Memorizza lo stato del popup in sessionStorage
+        // Store the popup state in sessionStorage
         sessionStorage.setItem("popupShown", "true");
         
-        // Rimuovi l'evento click dal bottone OK dopo la chiusura
+        // Remove the click event from the OK button after closing
         okButton.removeEventListener("click", closePopup);
     }
 
-    // Se il popup non è mai stato mostrato, visualizzalo
+    // If the popup has never been shown, display it
     if (popupShown == null || !popupShown) {
         popup.style.display = "block";
 
-        // Aggiungi l'evento click al bottone OK
+        // Add the click event to the OK button
         okButton.addEventListener("click", closePopup);
     } else {
         closePopup();
