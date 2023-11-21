@@ -248,6 +248,6 @@ function updatePageLanguage() {
     
     elements.forEach(function(element) {
         var key = element.getAttribute('data-translate');
-        element.innerHTML = translations[currentLanguage][key] || key;
+        element.innerHTML = translations[currentLanguage][key];
     });
 }
